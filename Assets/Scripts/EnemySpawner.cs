@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] WaveConfigSO currentWave;
+    [SerializeField] List<WaveConfigSO> waveConfigs;
+    [SerializeField] float timeBetweenWaves = 5f;
+    WaveConfigSO currentWave;
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemies();
+        StartCoroutine(SpawnEnemyWaves());
     }
 
     // Update is called once per frame
@@ -23,13 +25,21 @@ public class EnemySpawner : MonoBehaviour
         return currentWave;
     }
 
-    void SpawnEnemies()
+    IEnumerator SpawnEnemyWaves()
     {
-        for (int i = 0; i < currentWave.GetEnemyCount(); i++)
+        foreach (WaveConfigSO waveConfig in waveConfigs)
         {
-            Instantiate(currentWave.GetEnemyPrefab(i),
-                currentWave.GetStartingPoint().position,
-                Quaternion.identity, this.transform);
+
+            currentWave = waveConfig;
+            for (int i = 0; i < waveConfig.GetEnemyCount(); i++)
+            {
+                Instantiate(waveConfig.GetEnemyPrefab(i),
+                    waveConfig.GetStartingPoint().position,
+                    Quaternion.identity, this.transform);
+                yield return new WaitForSeconds(waveConfig.GetRandomSpawnTime());
+            }
+
+            yield return new WaitForSeconds(timeBetweenWaves);
         }
     }
 }

@@ -20,3 +20,6 @@ MonoBehaviour:
   - {fileID: 8983848215438886172, guid: cccdc0513ba6c9e49944cdd8abf455e3, type: 3}
   - {fileID: 8983848215438886172, guid: cccdc0513ba6c9e49944cdd8abf455e3, type: 3}
   - {fileID: 8983848215438886172, guid: cccdc0513ba6c9e49944cdd8abf455e3, type: 3}
+  timeBetweenSpawns: 1
+  spawnTimeVariance: 0.5
+  minimumSpawnTime: 0.2

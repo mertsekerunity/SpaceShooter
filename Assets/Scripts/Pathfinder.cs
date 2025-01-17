@@ -31,8 +31,8 @@ public class Pathfinder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //FollowPath();
-        FollowPathAlternative();
+        FollowPath();
+        //FollowPathAlternative();
     }
 
     void FollowPath()
@@ -43,7 +43,7 @@ public class Pathfinder : MonoBehaviour
             float delta = waveConfig.GetMoveSpeed()*Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, delta);
 
-            if(transform.position == targetPosition)
+            if(transform.position == targetPosition) //not good approach, movetowards snaps transform.position to targetposition
             {
                 waypointIndex++;
             }

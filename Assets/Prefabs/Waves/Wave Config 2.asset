@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathPrefab: {fileID: 6021516258683657875, guid: 8463d97e1b631194bbbe49f2389592bb, type: 3}
   moveSpeed: 5
+  enemyPrefabs:
+  - {fileID: 8983848215438886172, guid: cccdc0513ba6c9e49944cdd8abf455e3, type: 3}
+  - {fileID: 8983848215438886172, guid: cccdc0513ba6c9e49944cdd8abf455e3, type: 3}
+  - {fileID: 8983848215438886172, guid: cccdc0513ba6c9e49944cdd8abf455e3, type: 3}
+  - {fileID: 8983848215438886172, guid: cccdc0513ba6c9e49944cdd8abf455e3, type: 3}
+  timeBetweenSpawns: 1
+  spawnTimeVariance: 0.5
+  minimumSpawnTime: 0.2
