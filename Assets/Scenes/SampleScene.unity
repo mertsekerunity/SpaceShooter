@@ -543,6 +543,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c5a331ea01f8d946bbec2fe30019865, type: 2}
   - {fileID: 11400000, guid: c4dcd0c08f6c36442b7c18aa044b9158, type: 2}
   timeBetweenWaves: 2
+  isLooping: 0
 --- !u!4 &746877451
 Transform:
   m_ObjectHideFlags: 0
@@ -558,6 +559,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1198938852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 766834674498296656, guid: dcb640c9a7e83364c86b0ec184eb427e, type: 3}
+  m_PrefabInstance: {fileID: 4820413661840998658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1198938857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198938852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15336029ff3c66d4fac3f29cdc62a904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5682214766374985186, guid: fa21b461efa349440850e5a0ca34724c, type: 3}
+  projectileSpeed: 10
+  projectileLifeTime: 5
+  firingRate: 0.2
+  isFiring: 0
 --- !u!1001 &4820413661840998658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -613,7 +636,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 766834674498296656, guid: dcb640c9a7e83364c86b0ec184eb427e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1198938857}
   m_SourcePrefab: {fileID: 100100000, guid: dcb640c9a7e83364c86b0ec184eb427e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
