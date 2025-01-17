@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public WaveConfigSO GetCurrentWave()
@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     Instantiate(waveConfig.GetEnemyPrefab(i),
                         waveConfig.GetStartingPoint().position,
-                        Quaternion.Euler(-180,0,0), this.transform);
+                        Quaternion.Euler(-180, 0, 0), this.transform);
                     yield return new WaitForSeconds(waveConfig.GetRandomSpawnTime());
                 }
 

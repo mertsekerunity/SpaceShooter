@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3242489263439715963}
   - component: {fileID: 1712223320753668529}
   - component: {fileID: 617452300477547191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thrusters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4841,7 +4841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5026224688084091640}
   - component: {fileID: 594171867460630713}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Kla'ed - Fighter - Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4930,7 +4930,7 @@ GameObject:
   - component: {fileID: 2505454053617964396}
   - component: {fileID: 1265215410684043403}
   - component: {fileID: 4203307096565044485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5040,7 +5040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ba963c7db1d3946be9bf815a4e77ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 20
 --- !u!114 &1265215410684043403
 MonoBehaviour:
   m_ObjectHideFlags: 0

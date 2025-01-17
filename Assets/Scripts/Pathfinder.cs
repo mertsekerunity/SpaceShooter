@@ -40,10 +40,10 @@ public class Pathfinder : MonoBehaviour
         if (waypointIndex < waypoints.Count)
         {
             Vector3 targetPosition = waypoints[waypointIndex].position;
-            float delta = waveConfig.GetMoveSpeed()*Time.deltaTime;
+            float delta = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, delta);
 
-            if(transform.position == targetPosition) //not good approach, movetowards snaps transform.position to targetposition
+            if (transform.position == targetPosition) //not good approach, movetowards snaps transform.position to targetposition
             {
                 waypointIndex++;
             }
@@ -60,14 +60,14 @@ public class Pathfinder : MonoBehaviour
         {
             float moveSpeed = waveConfig.GetMoveSpeed();
             float noise = Mathf.PerlinNoise(Time.time, 0); //noise can also defined for y-axis for more variety
-            float delta = (moveSpeed + noise * perlinNoiseScale) *Time.deltaTime;
-            
+            float delta = (moveSpeed + noise * perlinNoiseScale) * Time.deltaTime;
+
 
             Vector3 targetPosition = waypoints[waypointIndex].position;
             Vector3 direction = (targetPosition - transform.position).normalized;
             transform.position += direction * delta;
 
-            if (Vector3.Distance(transform.position,targetPosition) <= delta/2)  //Epsilon value leads to overshoot and oscillation, fine-tuned threshold needed
+            if (Vector3.Distance(transform.position, targetPosition) <= delta / 2)  //Epsilon value leads to overshoot and oscillation, fine-tuned threshold needed
             {                                                                     // Vector2.MoveTowards inherently ensures the object will land exactly on the target position if the step size aligns perfectly.  
                 waypointIndex++;
             }

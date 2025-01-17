@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7732940210555527901}
   - component: {fileID: 5837708723234251817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kla'ed - Torpedo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,8 @@ GameObject:
   - component: {fileID: 5529267918319698751}
   - component: {fileID: 5721492286411434856}
   - component: {fileID: 2857427281860349961}
-  m_Layer: 0
+  - component: {fileID: -307408485966133334}
+  m_Layer: 6
   m_Name: Player Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,3 +181,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0018406212, y: 0.0016994849}
   m_Size: {x: 0.058257997, y: 0.21479635}
   m_Direction: 0
+--- !u!114 &-307408485966133334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682214766374985186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925545a9f75c9014b8c0c12bb798c22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

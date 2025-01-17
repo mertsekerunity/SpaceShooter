@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1665869629606442326}
   - component: {fileID: 1208371000787208715}
   - component: {fileID: 8040084540656988150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2076390412776226218}
   - component: {fileID: 7630055046940856124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Ship - Base - Full health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,8 +276,8 @@ GameObject:
   - component: {fileID: 3607709768345723631}
   - component: {fileID: 8539366158173980821}
   - component: {fileID: 4296132850813915350}
-  m_Layer: 0
-  m_Name: Particle System
+  m_Layer: 6
+  m_Name: Thrusters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

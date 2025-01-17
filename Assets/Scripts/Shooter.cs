@@ -21,6 +21,13 @@ public class Shooter : MonoBehaviour
 
     Coroutine firingCoroutine;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     private void Start()
     {
         if (isEnemy)
@@ -53,21 +60,26 @@ public class Shooter : MonoBehaviour
         while (true)
         {
             GameObject instance = Instantiate(projectilePrefab,
-                transform.position,Quaternion.identity);
+                transform.position, Quaternion.identity);
 
             Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
-            if(rb2d != null)
+            if (rb2d != null)
             {
                 rb2d.velocity = transform.up * projectileSpeed;
             }
 
             Destroy(instance, projectileLifeTime);
 
-            float timeToNextProjectile = Random.Range(baseFiringRate-firingRateVariance,
-                baseFiringRate+firingRateVariance);
+            float timeToNextProjectile = Random.Range(baseFiringRate - firingRateVariance,
+                baseFiringRate + firingRateVariance);
 
             timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFiringRate, float.MaxValue);
 
+            if (!isEnemy)
+            {
+                audioManager.PlayShootingClip();
+            }
+            
 
             yield return new WaitForSeconds(baseFiringRate);
         }
