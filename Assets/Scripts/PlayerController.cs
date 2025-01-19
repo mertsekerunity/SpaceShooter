@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
-    Vector2 rawInput;
+    [HideInInspector] public Vector2 rawInput;
     float defaultCameraSize = 5f;
 
     [SerializeField] float paddingLeft;

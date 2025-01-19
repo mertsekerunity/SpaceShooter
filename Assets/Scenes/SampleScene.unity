@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: {x: 0, y: 0.2}
+  baseScrollSpeed: 0.1
 --- !u!1 &223787346
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6bad3f558ea7a4296b1b62f3c28b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: {x: 0, y: 0.1}
+  moveSpeed: {x: 0.05, y: 0.03}
+  baseScrollSpeed: 0.1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
