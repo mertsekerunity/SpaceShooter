@@ -26,7 +26,7 @@ public class SpriteScroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Main Menu" || SceneManager.GetActiveScene().name == "Game Over")
+        if(playerController == null)
         {
             offset[0] = 0;
             offset[1] = baseScrollSpeed * Time.deltaTime;
