@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
     {
         audioManager = FindObjectOfType<AudioManager>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
