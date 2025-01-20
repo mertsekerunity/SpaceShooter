@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+
     [SerializeField] float moveSpeed = 5f;
     [HideInInspector] public Vector2 rawInput;
     float defaultCameraSize = 5f;
