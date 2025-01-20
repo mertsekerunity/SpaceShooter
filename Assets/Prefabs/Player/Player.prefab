@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  rawInput: {x: 0, y: 0}
   paddingLeft: 0.5
   paddingRight: 0.5
   paddingTop: 4
@@ -160,7 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ba963c7db1d3946be9bf815a4e77ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   health: 100
+  score: 50
 --- !u!114 &8040084540656988150
 MonoBehaviour:
   m_ObjectHideFlags: 0

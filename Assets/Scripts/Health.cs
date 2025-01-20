@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] bool isPlayer;
     [SerializeField] int health = 100;
+    [SerializeField] int score = 50;
 
     AudioManager audioManager;
+    ScoreKeeper scoreKeeper;
+    LevelManager levelManager;
+
+    public int GetHealth()
+    {
+        return health;
+    }
 
     private void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,7 +40,20 @@ public class Health : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        if (!isPlayer)
+        {
+            scoreKeeper.ModifyScore(score);
+        }
+        else
+        {
+            levelManager.LoadGameOver();
+        }
+        Destroy(gameObject);
     }
 }
